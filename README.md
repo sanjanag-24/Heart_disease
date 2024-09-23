@@ -1,37 +1,49 @@
-Heart Disease Prediction Using Deep Learning
+
+# Heart Disease Prediction Using Deep Learning
+
+## Overview
+
 This project implements deep learning models using Keras to predict heart disease based on medical data.
 
-Overview
-Two models are created:
+## Models
 
-Categorical Model: Predicts heart disease (0: No, 1: Yes).
-Binary Model: Predicts probability of heart disease (0 or 1).
-Dataset
-The dataset includes features like age, sex, blood pressure, cholesterol, etc., and the target indicates heart disease presence. Data preprocessing includes handling missing values and standardizing the dataset.
+- **Categorical Model**: Predicts heart disease (0: No, 1: Yes).
+- **Binary Model**: Predicts heart disease probability (0 or 1).
 
-Model Architecture
-Both models use dense layers with dropout regularization:
+## Dataset
 
-Input: 13 medical features
-Hidden Layers: ReLU activation
-Output: Softmax (categorical) / Sigmoid (binary)
-Usage
-Clone the repo and install dependencies:
+The dataset includes features like `age`, `sex`, `blood pressure`, `cholesterol`, and more, used to predict heart disease.
 
-bash
-Copy code
-git clone https://github.com/yourusername/heart-disease-prediction.git
-pip install -r requirements.txt
-Train and evaluate the models:
+## Model Architecture
 
-python
-Copy code
-model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=10)
-Visualize results:
+- **Input**: 13 medical features.
+- **Hidden Layers**: ReLU activation with dropout regularization.
+- **Output**: Softmax (categorical) / Sigmoid (binary).
 
-python
-Copy code
-plt.plot(history.history['accuracy'])
-Results
-Categorical Model Accuracy: 83.6%
-Binary Model: Results from binary classification report.
+## How to Use
+
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/yourusername/heart-disease-prediction.git
+   ```
+
+2. Install dependencies:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Train the models:  
+   ```python
+   model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=10)
+   ```
+
+4. Visualize results:  
+   ```python
+   plt.plot(history.history['accuracy'])
+   ```
+
+## Results
+
+- **Categorical Model Accuracy**: 83.6%
+- **Binary Model**: Evaluated using binary classification report.
+
